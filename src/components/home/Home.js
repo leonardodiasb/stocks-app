@@ -9,7 +9,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const clickEvent = (e) => {
-    const ide = e.target.parentNode.id;
+    const ide = e.target.parentNode.parentNode.id;
     console.log(ide);
     dispatch(toggleStocks(ide));
   };
@@ -26,13 +26,15 @@ const Home = () => {
   ));
 
   const displayStocks = state.slice(1, 12).map((stock) => (
-    <div key={stock.symbol} id={stock.symbol}>
-      <button type="button" onClick={clickEvent}>
-        {stock.symbol}
-        :
-        $
-        {stock.price}
-      </button>
+    <div id={stock.symbol} key={stock.symbol}>
+      <NavLink to="/details">
+        <button type="button" onClick={clickEvent}>
+          {stock.symbol}
+          :
+          $
+          {stock.price}
+        </button>
+      </NavLink>
     </div>
   ));
 
@@ -41,7 +43,6 @@ const Home = () => {
       <div className="main-stk">
         {mainStock}
       </div>
-      <NavLink to="/details">OBS</NavLink>
       <div className="stk-list">
         {displayStocks}
       </div>
