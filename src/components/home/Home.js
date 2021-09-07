@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { toggleStocks } from '../../redux/home/home';
 
 const Home = () => {
@@ -40,6 +41,7 @@ const Home = () => {
       <div className="main-stk">
         {mainStock}
       </div>
+      <NavLink to="/details">OBS</NavLink>
       <div className="stk-list">
         {displayStocks}
       </div>
