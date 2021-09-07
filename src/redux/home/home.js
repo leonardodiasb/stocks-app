@@ -1,8 +1,14 @@
 import { GET_STOCKS, GET_STOCKS_SUCCESS, GET_STOCKS_ERR } from '../slices/stocksSlices';
 
+// Initial state
+
+const initialState = {
+  stocks: [],
+};
+
 // Reducer
 
-const reducer = (state = [], action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_STOCKS:
       return { ...state, pending: true };

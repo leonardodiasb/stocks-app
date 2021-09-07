@@ -1,32 +1,35 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import getStocks from '../../redux/slices/stocksSlices';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
   const state = useSelector((state) => state.homeReducer.stocks);
 
-  const dispatch = useDispatch();
-
-  useEffect(async () => {
-    await dispatch(getStocks());
-    console.log(state);
-  }, []);
-
-  const displayStocks = state.map((stock) => (
-    <p key="0">
+  const mainStock = state.slice(0, 1).map((stock) => (
+    <div key={stock.symbol}>
       {stock.symbol}
       :
       $
       {stock.price}
-    </p>
+    </div>
+  ));
+
+  const displayStocks = state.slice(1, 12).map((stock) => (
+    <div key={stock.symbol}>
+      {stock.symbol}
+      :
+      $
+      {stock.price}
+    </div>
   ));
 
   return (
-    <div>
-      <p>
-        Test p tag
+    <div className="home-container">
+      <div className="main-stk">
+        {mainStock}
+      </div>
+      <div className="stk-list">
         {displayStocks}
-      </p>
+      </div>
     </div>
   );
 };
