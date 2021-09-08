@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 import Home from './components/home/Home';
 import Details from './components/details/Details';
+import Navbar from './components/Navbar';
 import getStocks from './redux/slices/stocksSlices';
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <header className="App-header" />
+        <header className="App-header">
+          <Navbar />
+        </header>
         <Switch>
           <Route exact path="/">
             <Home />

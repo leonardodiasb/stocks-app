@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
 
 const Details = () => {
@@ -58,7 +57,6 @@ const Details = () => {
 
   return (
     <div>
-      <NavLink to="/" exact>OBS</NavLink>
       {detailDisplay}
       <div className="details-info-list">
         {detailsInfoDisplay}
