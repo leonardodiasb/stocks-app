@@ -3,7 +3,10 @@ import { GET_DETAILS, DETAILS_STOCK, GET_DETAILS_ERR } from '../slices/detailsSl
 // Initial state
 
 const initialState = {
-  details: [],
+  details: [{
+    symbol: 'test',
+    name: 'loading',
+  }],
 };
 
 // Reducer

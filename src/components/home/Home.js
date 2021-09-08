@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { toggleStocks } from '../../redux/home/home';
+import detailsStock from '../../redux/slices/detailsSlices';
 
 const Home = () => {
   const state = useSelector((state) => state.homeReducer.stocks);
@@ -10,24 +10,25 @@ const Home = () => {
 
   const clickEvent = (e) => {
     const ide = e.target.parentNode.parentNode.id;
-    console.log(ide);
-    dispatch(toggleStocks(ide));
+    dispatch(detailsStock(ide));
   };
 
   const mainStock = state.slice(0, 1).map((stock) => (
     <div key={stock.symbol} id={stock.symbol}>
-      <button type="button" onClick={clickEvent}>
-        {stock.symbol}
-        :
-        $
-        {stock.price}
-      </button>
+      <NavLink to={`/${stock.symbol}`}>
+        <button type="button" onClick={clickEvent}>
+          {stock.symbol}
+          :
+          $
+          {stock.price}
+        </button>
+      </NavLink>
     </div>
   ));
 
   const displayStocks = state.slice(1, 12).map((stock) => (
     <div id={stock.symbol} key={stock.symbol}>
-      <NavLink to="/details">
+      <NavLink to={`/${stock.symbol}`}>
         <button type="button" onClick={clickEvent}>
           {stock.symbol}
           :
