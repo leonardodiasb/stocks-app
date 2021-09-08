@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   const state = useSelector((state) => state.homeReducer.stocks);
-  const corte = state.slice(0, 12);
+  const stocksList = state.slice(0, 13);
 
   return (
     <div className="App">
@@ -27,7 +27,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          {corte.map((stocks) => (
+          {stocksList.map((stocks) => (
             <Route key={stocks.symbol} path={`/${stocks.symbol}`}>
               <Details />
             </Route>
