@@ -76,6 +76,7 @@ nav {
 .stock-item-container:nth-child(4n+2) {
   background-color: #3f62a4;
 }
+
 .stock-item-container:nth-child(4n-3),
 .stock-item-container:nth-child(4n) {
   background-color: #4268b0;
