@@ -4,8 +4,16 @@ import { GET_DETAILS, DETAILS_STOCK, GET_DETAILS_ERR } from '../slices/detailsSl
 
 const initialState = {
   details: [{
-    symbol: 'test',
+    symbol: '',
     name: 'loading',
+    exchange: '',
+    price: 0,
+    previousClose: 0,
+    changesPercentage: '',
+    dayHigh: 0,
+    dayLow: 0,
+    yearHigh: 0,
+    yearLow: 0,
   }],
 };
 

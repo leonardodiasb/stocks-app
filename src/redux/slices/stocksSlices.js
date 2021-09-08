@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const GET_STOCKS = 'stocks/STOCKSslice/GET_STOCKS';
 const GET_STOCKS_SUCCESS = 'stocks/STOCKSslice/GET_STOCKS_SUCCESS';
 const GET_STOCKS_ERR = 'stocks/STOCKSslice/GET_STOCKS_ERR';
@@ -7,8 +9,11 @@ const StocksURL = `https://financialmodelingprep.com/api/v3/stock/list${apiKey}`
 
 const getStocks = () => async (dispatch) => {
   dispatch({ type: GET_STOCKS });
-  const response = await fetch(StocksURL);
-  const stocks = await response.json();
+  // const response = await fetch(StocksURL);
+  const response = await axios.get(StocksURL);
+
+  // const stocks = await response.json();
+  const stocks = response.data;
   return dispatch({ type: GET_STOCKS_SUCCESS, stocks });
 };
 
