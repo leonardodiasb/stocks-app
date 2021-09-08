@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 import Home from './components/home/Home';
+import Details from './components/details/Details';
 import getStocks from './redux/slices/stocksSlices';
 
 function App() {
@@ -11,10 +13,24 @@ function App() {
     await dispatch(getStocks());
   }, []);
 
+  const state = useSelector((state) => state.homeReducer.stocks);
+  const corte = state.slice(0, 12);
+
   return (
     <div className="App">
-      <header className="App-header" />
-      <Home />
+      <Router>
+        <header className="App-header" />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          {corte.map((stocks) => (
+            <Route key={stocks.symbol} path={`/${stocks.symbol}`}>
+              <Details />
+            </Route>
+          ))}
+        </Switch>
+      </Router>
     </div>
   );
 }

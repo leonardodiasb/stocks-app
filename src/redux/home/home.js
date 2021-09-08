@@ -9,22 +9,11 @@ const initialState = {
 };
 
 // Actions
-
-const TOGGLE_STOCK = 'stocks/stocks/TOGGLE_STOCK';
-
 // Action Creators
-
-export const toggleStocks = (payload) => ({
-  type: TOGGLE_STOCK,
-  payload,
-});
-
 // Reducer
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case TOGGLE_STOCK:
-      return { ...state, details: action.payload };
     case GET_STOCKS:
       return { ...state, pending: true };
     case GET_STOCKS_SUCCESS:
@@ -36,7 +25,6 @@ const reducer = (state = initialState, action) => {
           {
             symbol: stocks.symbol,
             price: stocks.price,
-            website: stocks.website,
           },
         );
       });

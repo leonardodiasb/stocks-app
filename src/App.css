@@ -1,3 +1,43 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.details-main-container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  font-size: 30px;
+  background-color: #4369b2;
+}
+
+.symbol-container {
+  border-bottom: 1px solid #fff;
+  font-size: 50px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+}
+
+.details-breakline {
+  background-color: #35548b;
+  padding: 2px 30px;
+  font-size: 16px;
+}
+
+.details-info-item {
+  background-color: #4167ae;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  font-size: 20px;
+}
+
+.details-info-item:nth-child(even) {
+  background-color: #3f62a4;
 }
