@@ -4,6 +4,35 @@
   color: #fff;
 }
 
+/* Navbar */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: 300;
+  background-color: #4369b2;
+  padding: 5px 10px;
+}
+
+.nav-btns-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-btn {
+  display: flex;
+  font-size: 36px;
+}
+
+.search-btn {
+  font-size: 26px;
+}
+
+/* Details Page */
+
 .details-main-container {
   height: 200px;
   display: flex;
