@@ -4,6 +4,10 @@
 
 > Single Page Application that fetch data from a Stock Market API and lists information about each stock.
 
+## Live view
+
+- [Live view](https://inspiring-swirles-3965cd.netlify.app)
+
 ## Built With
 
 - JavaScript/React
@@ -55,4 +59,4 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - React, Redux and React Router documentation
-- Nelson Sakwa, which the original design inspired this project. You can see his design [here](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)
+- Nelson Sakwa, which the original design inspired this project. You can see his design [here](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
