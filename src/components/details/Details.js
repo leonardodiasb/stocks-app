@@ -41,8 +41,8 @@ const Details = () => {
           {state.price.toFixed(2)}
           {
             (state.changesPercentage < 0)
-              ? <FaAngleDown />
-              : <FaAngleUp />
+              ? <FaAngleDown className="arrow-down" />
+              : <FaAngleUp className="arrow-up" />
           }
         </div>
       </div>

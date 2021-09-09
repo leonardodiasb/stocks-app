@@ -25,6 +25,7 @@ const reducer = (state = initialState, action) => {
           {
             symbol: stocks.symbol,
             price: stocks.price,
+            name: stocks.name,
           },
         );
       });
