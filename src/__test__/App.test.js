@@ -14,5 +14,5 @@ test('render the title', async () => {
     </Provider>,
   );
   debug();
-  expect(screen.getByText(/Capstone Project/i)).toBeInTheDocument();
+  expect(screen.getByText(/Stock Market WebApp/i)).toBeInTheDocument();
 });
