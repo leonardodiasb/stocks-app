@@ -4,6 +4,10 @@
 
 > Single Page Application that fetch data from a Stock Market API and lists information about each stock.
 
+## Live view
+
+- [Live view](https://inspiring-swirles-3965cd.netlify.app)
+
 ## Built With
 
 - JavaScript/React
