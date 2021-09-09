@@ -4,6 +4,10 @@
   color: #fff;
 }
 
+html {
+  background-color: #35548b;
+}
+
 a {
   text-decoration: none;
 }
@@ -49,6 +53,11 @@ nav {
 .main-stock > a {
   border: none;
   font-size: 40px;
+}
+
+input {
+  color: #000;
+  font-size: 14px;
 }
 
 .stk-list {
@@ -128,4 +137,20 @@ nav {
 
 .details-info-item:nth-child(even) {
   background-color: #3f62a4;
+}
+
+@media (min-width: 600px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    padding: 5px 38px;
+  }
+
+  .home-container {
+    width: 348px;
+  }
 }

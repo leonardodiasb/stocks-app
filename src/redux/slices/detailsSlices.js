@@ -10,10 +10,8 @@ const DetailsURL = 'https://financialmodelingprep.com/api/v3/quote/';
 // eslint-disable-next-line
 const detailsStock = (symbol) => async (dispatch, getState) => {
   dispatch({ type: GET_DETAILS });
-  // const response = await fetch(DetailsURL + symbol + apiKey);
   const response = await axios.get(DetailsURL + symbol + apiKey);
 
-  // const details = await response.json();
   const details = response.data;
   return dispatch({ type: DETAILS_STOCK, details });
 };
