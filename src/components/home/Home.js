@@ -62,9 +62,9 @@ const Home = () => {
     <div className="home-container">
       <div className="main-stk">
         {mainStock}
-      </div>
-      <div className="details-breakline">
-        <input placeholder="Search" onChange={searchStock} />
+        <div className="details-breakline">
+          <input placeholder="Search" onChange={searchStock} />
+        </div>
       </div>
       {
         filtered.length === 0

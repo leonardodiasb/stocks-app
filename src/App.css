@@ -139,7 +139,7 @@ input {
   background-color: #3f62a4;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .App {
     display: flex;
     flex-direction: column;
@@ -147,10 +147,45 @@ input {
   }
 
   nav {
-    padding: 5px 38px;
+    width: 94vw;
+    padding: 5px 46px;
   }
 
   .home-container {
-    width: 348px;
+    display: flex;
+  }
+
+  .main-stock {
+    width: 230px;
+    height: 250px;
+  }
+
+  .main-stock > a {
+    font-size: 60px;
+  }
+
+  input {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .stock-item-container {
+    width: calc(50%);
+    padding: 40px 0;
+  }
+
+  .details-container {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-stock {
+    width: 350px;
+  }
+
+  .stock-item-container {
+    width: 33.3%;
+    padding: 70px 0;
   }
 }
