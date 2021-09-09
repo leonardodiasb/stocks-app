@@ -59,4 +59,4 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - React, Redux and React Router documentation
-- Nelson Sakwa, which the original design inspired this project. You can see his design [here](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)
+- Nelson Sakwa, which the original design inspired this project. You can see his design [here](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
