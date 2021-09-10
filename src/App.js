@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
+import Home from './components/home/Home';
+import Details from './components/details/Details';
+import Navbar from './components/Navbar';
+import getStocks from './redux/slices/stocksSlices';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(async () => {
+    await dispatch(getStocks());
+  }, []);
+
+  const state = useSelector((state) => state.homeReducer.stocks);
+  const stocksList = state.slice(0, 13);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <header className="App-header">
+          <Navbar />
+        </header>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          {stocksList.map((stocks) => (
+            <Route key={stocks.symbol} path={`/${stocks.symbol}`}>
+              <Details />
+            </Route>
+          ))}
+        </Switch>
+      </Router>
     </div>
   );
 }

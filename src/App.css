@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background-color: #35548b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: 300;
+  background-color: #4369b2;
+  padding: 5px 10px;
+}
+
+.nav-btns-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-btn {
+  display: flex;
+  font-size: 36px;
+}
+
+.search-btn {
+  font-size: 26px;
+}
+
+/* Home Page */
+
+.main-stock {
+  height: 130px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding: 60px 30px 0 30px;
+  background-color: #4369b2;
+}
+
+.main-stock > a {
+  border: none;
+  font-size: 40px;
+}
+
+input {
+  color: #000;
+  font-size: 14px;
+}
+
+.stk-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stock-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 20px;
+  width: calc(50% - 20px);
+  padding: 70px 10px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.stock-item-container > p {
+  font-size: 12px;
+  text-align: end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.stock-item-container:nth-child(4n-1),
+.stock-item-container:nth-child(4n+2) {
+  background-color: #3f62a4;
+}
+
+.stock-item-container:nth-child(4n-3),
+.stock-item-container:nth-child(4n) {
+  background-color: #4268b0;
+}
+
+/* Details Page */
+
+.details-main-container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  font-size: 30px;
+  background-color: #4369b2;
+}
+
+.symbol-container {
+  border-bottom: 1px solid #fff;
+  font-size: 50px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-up > path {
+  color: #3fcc6f;
+}
+
+.arrow-down > path {
+  color: #fd6e70;
+}
+
+.details-breakline {
+  background-color: #35548b;
+  padding: 2px 30px;
+  font-size: 16px;
+}
+
+.details-info-item {
+  background-color: #4167ae;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  font-size: 20px;
+}
+
+.details-info-item:nth-child(even) {
+  background-color: #3f62a4;
+}
+
+@media (min-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  #root {
+    display: flex;
+    justify-content: center;
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+  }
+
+  .details-breakline {
+    border-left: 1px solid #4369b2;
+    border-right: 1px solid #4369b2;
+  }
+
+  input {
+    font-size: 24px;
+    width: 100%;
   }
 }
