@@ -140,52 +140,29 @@ input {
 }
 
 @media (min-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #root {
+    display: flex;
+    justify-content: center;
+  }
+
   .App {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 600px;
   }
 
-  nav {
-    width: 94vw;
-    padding: 5px 46px;
-  }
-
-  .home-container {
-    display: flex;
-  }
-
-  .main-stock {
-    width: 230px;
-    height: 250px;
-  }
-
-  .main-stock > a {
-    font-size: 60px;
+  .details-breakline {
+    border-left: 1px solid #4369b2;
+    border-right: 1px solid #4369b2;
   }
 
   input {
     font-size: 24px;
     width: 100%;
-  }
-
-  .stock-item-container {
-    width: calc(50%);
-    padding: 40px 0;
-  }
-
-  .details-container {
-    width: 600px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .main-stock {
-    width: 350px;
-  }
-
-  .stock-item-container {
-    width: 33.3%;
-    padding: 70px 0;
   }
 }
