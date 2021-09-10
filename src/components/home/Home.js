@@ -12,6 +12,7 @@ const Home = () => {
 
   const clickEvent = (e) => {
     const ide = e.target.id;
+    window.scrollTo(0, 0);
     dispatch(detailsStock(ide));
   };
 
